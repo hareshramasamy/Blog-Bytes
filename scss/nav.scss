@@ -1,0 +1,12 @@
+// navigation pane scss styling
+.nav {
+    background-color: $background-color-dark;
+    border-bottom: 0.5px solid $background-color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        text-align: center;
+        color: $background-color-white;
+    }
+}
