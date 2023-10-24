@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogBytes</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Simple Navigation window containing a single h1 tag for heading. -->
+    <div class = "nav">
+        <div>
+            <h1>BlogBytes - Byte-sized blogs to stretch your tech muscles! </h1>
+        </div>
+    </div>
+
+    <!--  This div contains html tags for create blog, update blog and blog containers dynamically created using javascript-->
+    <div class="blog-container">
+        <div class="create-section">
+            <div>
+                <button id = "create-blog">Create Blog</button>
+            </div>    
+            <div>
+                <form class = "create-form disabled-form" id = "new-blog-form" action="index.html" method = "POST">
+                    <div class = "flex-row">
+                        <input name="title" id="title" type="text" placeholder="Enter Title">
+                        <input name="author" id="author" type="text" placeholder="Enter Author Name">
+                    </div>
+                    <div class = "create-content">
+                        <textarea name="content" id="content" placeholder="Write your Content here"></textarea>
+                    </div>
+                    <div>
+                        <button id="submit-blog" type = "submit">Create Blog Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- update section contains similar set of tags as the create sections, but only the author and content fields are editable and title field is made readonly -->
+        <div class="update-section"> 
+            <div>
+                <form class = "update-form disabled-form" id = "update-blog-form" action="index.html" method = "POST">
+                    <input name="update-id" id="update-id" type="text">
+                    <div class = "flex-row">
+                        <input name="update-title" id="update-title" type="text" placeholder="Enter Title" readonly>
+                        <input name="update-author" id="update-author" type="text" placeholder="Enter Author Name">
+                    </div>
+                    <div class = "update-content">
+                        <textarea name="update-content" id="update-content" placeholder="Write your Content here"></textarea>
+                    </div>
+                    <div>
+                        <button id="submit-updated-blog" type = "submit">Update Blog Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id = "container"></div>
+    </div>
+    <script src = "js/app.js"></script>
+</body>
+</html>
