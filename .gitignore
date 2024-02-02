@@ -10,5 +10,4 @@ npm-debug.log
 *.css.map
 *.sass.map
 *.scss.map
-dist/
 node_modules/
